@@ -20,7 +20,7 @@ export default function SearchMovies() {
       
   }
 
-  const apiurl = "http://www.omdbapi.com/?apikey=98f3c491";
+  const apiurl = "https://www.omdbapi.com/?apikey=98f3c491";
   const searchMovies = async (e) => {
       e.preventDefault();
       try {
@@ -39,7 +39,7 @@ export default function SearchMovies() {
   }
   
   const openPopup = async (id) => {
-    const url = `http://www.omdbapi.com/?apikey=98f3c491&i=${id}`
+    const url = `https://www.omdbapi.com/?apikey=98f3c491&i=${id}`
 
     try {
       const res = await fetch(url);
