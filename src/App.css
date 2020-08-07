@@ -2,37 +2,213 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  background-color: lightblue;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.nav-links{
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+html{
+  font-size: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  background-color: rgb(244,244,244);
+  color: #333;
+}
+
+p{
+  font-size: 1.6rem;
+}
+
+small{
+  font-size: 1.2rem;
+}
+
+.container{
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 40px;
+}
+
+.title{
+  font-size: 4.4rem;
+  text-align: center;
+}
+
+.form{
+  display: grid;
+
+}
+
+.label{
+  font-size: 1.2rem;
+  font: bolder;
+  text-align: left;
+  margin-bottom: 0.2rem;
+  text-transform: uppercase;
+}
+
+.input{
+  font-size: 1.6rem;
+  padding: 0.5rem 2rem ;
+  line-height: 1.8rem;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  margin-bottom: 1rem;
+}
+
+.button{
+  background-color: rgba(0,0,0,0.75);
+  color: white;
+  padding: 1rem 2 rem;
+  border: 1px solid rgba(0,0,0,0.75);
+  border-radius: 20px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: background-color 250ms;
+}
+
+.button:hover{
+  background-color: rgba(0,0,0,0.85);
+}
+
+@media (min-width:786px){
+  .form{
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 1rem;
+    align-items: center;
+  }
+
+  .input{
+    margin-bottom: 0;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card-list{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px -15px;
+}
+
+.card{
+  width: 33.333%;
+  min-width: 250px;
+  padding: 15px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.card--title{
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px;
+  background: #445565;
+  flex: 1 1 100%;
+  transition: 0.4s ease-out;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card--image{
+  display: block;
+  width: 100%;
 }
+
+.card:hover{
+  background: #FFF;
+  color: #223343;
+}
+
+.popup {
+  position: fixed;
+  padding: .5 rem;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #445565;
+
+  overflow-y: scroll;
+}
+
+.popup .content{
+  display: block;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 25px;
+
+  color: #FFF;
+}
+
+.popup .content h2{
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.popup .content h2 span{
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.popup .content .rating {
+  margin-bottom: 30px;
+}
+
+.popup .content .plot {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px -15px 30px;
+}
+
+.popup .content .plot img{
+  flex: 1 1 50%;
+  max-width: 300px;
+  padding: 0px 15px;
+}
+
+.popup .content .plot p{
+  flex: 1 1 50%;
+  padding: 15px;
+}
+
+.popup .content .close{
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: 700;
+
+  background: #4484c4;
+  color: #FFF;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  appearance: none;
+  cursor: pointer;
+
+  transition: 0.4s ease-out;
+}
+
+.popup .content .close:hover{
+  background: #223343;
+}
+
+
