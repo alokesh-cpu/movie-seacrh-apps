@@ -17,7 +17,7 @@ export default function SearchMovies() {
 
   const toggler = () =>{
       toggle ? setToggle(false) : setToggle(true);
-      
+            
   }
 
   const apiurl = "https://www.omdbapi.com/?apikey=98f3c491";
